@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="自己紹介ページ — スキル・制作物・連絡先をまとめたポートフォリオサイトです。" />
+  <title>Portfolio | Nakanishi Sae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="desktop" id="desktop">
+
+  <!-- ===== SIDEBAR / DOCK ===== -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar__nav">
+      <button class="sidebar__btn is-active" data-win="win-about" id="nav-about">
+        <span class="material-symbols-outlined">person</span>
+        <span class="sidebar__label">About</span>
+      </button>
+      <button class="sidebar__btn" data-win="win-skills" id="nav-skills">
+        <span class="material-symbols-outlined">terminal</span>
+        <span class="sidebar__label">Skills</span>
+      </button>
+      <button class="sidebar__btn" data-win="win-works" id="nav-works">
+        <span class="material-symbols-outlined">folder_open</span>
+        <span class="sidebar__label">Works</span>
+      </button>
+      <button class="sidebar__btn" data-win="win-contact" id="nav-contact">
+        <span class="material-symbols-outlined">mail</span>
+        <span class="sidebar__label">Contact</span>
+      </button>
+    </nav>
+  </aside>
+
+  <!-- ===== DESKTOP CANVAS ===== -->
+  <div class="desktop-canvas" id="desktop-canvas">
+
+    <!-- ── Window: About ── -->
+    <section class="window" id="win-about">
+      <div class="window-titlebar">
+        <span class="window-icon material-symbols-outlined">person</span>
+        <span class="window-title">About — Nakanishi Sae</span>
+        <div class="window-controls">
+          <button class="win-btn" data-action="min" data-win="win-about" aria-label="最小化">
+            <span class="material-symbols-outlined">remove</span>
+          </button>
+          <button class="win-btn" data-action="max" data-win="win-about" aria-label="最大化">
+            <span class="material-symbols-outlined">crop_square</span>
+          </button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="about-layout">
+          <div class="about-avatar-wrap">
+            <div class="about-avatar">NS</div>
+            <div class="about-avatar-ring"></div>
+          </div>
+          <h1 class="about-name">Nakanishi Sae</h1>
+          <p class="about-tagline">フルスタックで、ものづくりが好きなエンジニア。</p>
+          <div class="about-badges">
+            <span class="badge"><span class="material-symbols-outlined">location_on</span> Japan</span>
+            <span class="badge"><span class="material-symbols-outlined">work</span> Web Developer</span>
+            <span class="badge"><span class="material-symbols-outlined">school</span> Open to Work</span>
+          </div>
+          <div class="about-cta">
+            <button class="btn btn--primary" data-open="win-works" id="hero-works-btn">制作物を見る</button>
+            <button class="btn btn--outline" data-open="win-contact" id="hero-contact-btn">連絡する</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Window: Skills ── -->
+    <section class="window is-minimized" id="win-skills">
+      <div class="window-titlebar">
+        <span class="window-icon material-symbols-outlined">terminal</span>
+        <span class="window-title">Skills</span>
+        <div class="window-controls">
+          <button class="win-btn" data-action="min" data-win="win-skills" aria-label="最小化">
+            <span class="material-symbols-outlined">remove</span>
+          </button>
+          <button class="win-btn" data-action="max" data-win="win-skills" aria-label="最大化">
+            <span class="material-symbols-outlined">crop_square</span>
+          </button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="skills__grid">
+          <div class="skill-card" id="skill-languages">
+            <div class="skill-card__icon"><span class="material-symbols-outlined">terminal</span></div>
+            <h3 class="skill-card__title">Languages</h3>
+            <div class="skill-chips">
+              <span class="skill-chip">C#</span>
+              <span class="skill-chip">TypeScript</span>
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">Visual Basic</span>
+            </div>
+          </div>
+          <div class="skill-card" id="skill-frontend">
+            <div class="skill-card__icon"><span class="material-symbols-outlined">web</span></div>
+            <h3 class="skill-card__title">Frontend / Backend</h3>
+            <div class="skill-chips">
+              <span class="skill-chip">HTML</span>
+              <span class="skill-chip">CSS</span>
+              <span class="skill-chip">Angular</span>
+              <span class="skill-chip">.NET</span>
+            </div>
+          </div>
+          <div class="skill-card" id="skill-cloud">
+            <div class="skill-card__icon"><span class="material-symbols-outlined">cloud</span></div>
+            <h3 class="skill-card__title">Cloud / Tools</h3>
+            <div class="skill-chips">
+              <span class="skill-chip">Azure</span>
+              <span class="skill-chip">Git</span>
+              <span class="skill-chip">GitHub</span>
+            </div>
+          </div>
+          <div class="skill-card skill-card--cert" id="skill-cert">
+            <div class="skill-card__icon"><span class="material-symbols-outlined">workspace_premium</span></div>
+            <h3 class="skill-card__title">資格</h3>
+            <ul class="cert-list">
+              <li class="cert-item">
+                <span class="cert-item__badge">Azure</span>
+                <span class="cert-item__name">Azure Fundamentals</span>
+              </li>
+              <li class="cert-item">
+                <span class="cert-item__badge">Python</span>
+                <span class="cert-item__name">Python3 エンジニア認定基礎試験</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Window: Works ── -->
+    <section class="window is-minimized" id="win-works">
+      <div class="window-titlebar">
+        <span class="window-icon material-symbols-outlined">folder_open</span>
+        <span class="window-title">Works</span>
+        <div class="window-controls">
+          <button class="win-btn" data-action="min" data-win="win-works" aria-label="最小化">
+            <span class="material-symbols-outlined">remove</span>
+          </button>
+          <button class="win-btn" data-action="max" data-win="win-works" aria-label="最大化">
+            <span class="material-symbols-outlined">crop_square</span>
+          </button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="works__grid" id="works-grid">
+          <article class="work-card" id="work-1">
+            <div class="work-card__thumb" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+              <span class="work-card__thumb-icon material-symbols-outlined">public</span>
+            </div>
+            <div class="work-card__body">
+              <span class="work-card__tag">Web App</span>
+              <h3 class="work-card__title">サンプルプロジェクト</h3>
+              <p class="work-card__desc">制作物の説明をここに記述します。使用した技術や工夫した点などを書きましょう。</p>
+              <div class="work-card__tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="work-card__links">
+                <a href="#" class="work-card__link" id="work-1-demo">Demo →</a>
+                <a href="#" class="work-card__link work-card__link--secondary" id="work-1-code">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <div class="work-card work-card--empty" id="work-add">
+            <div class="work-card--empty__inner">
+              <span class="work-card--empty__icon material-symbols-outlined">add_circle</span>
+              <p>制作物を追加しましょう</p>
+              <span class="work-card--empty__hint">index.html の works セクションにカードを追加してください</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Window: Contact ── -->
+    <section class="window is-minimized" id="win-contact">
+      <div class="window-titlebar">
+        <span class="window-icon material-symbols-outlined">mail</span>
+        <span class="window-title">Contact</span>
+        <div class="window-controls">
+          <button class="win-btn" data-action="min" data-win="win-contact" aria-label="最小化">
+            <span class="material-symbols-outlined">remove</span>
+          </button>
+          <button class="win-btn" data-action="max" data-win="win-contact" aria-label="最大化">
+            <span class="material-symbols-outlined">crop_square</span>
+          </button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="contact__grid">
+          <a href="mailto:your@email.com" class="contact-card" id="contact-email">
+            <div class="contact-card__icon"><span class="material-symbols-outlined">mail</span></div>
+            <div class="contact-card__body">
+              <span class="contact-card__label">Email</span>
+              <span class="contact-card__value">your@email.com</span>
+            </div>
+            <span class="contact-card__arrow material-symbols-outlined">arrow_forward</span>
+          </a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
+            <div class="contact-card__icon"><span class="material-symbols-outlined">code</span></div>
+            <div class="contact-card__body">
+              <span class="contact-card__label">GitHub</span>
+              <span class="contact-card__value">@yourusername</span>
+            </div>
+            <span class="contact-card__arrow material-symbols-outlined">arrow_forward</span>
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-twitter">
+            <div class="contact-card__icon"><span class="material-symbols-outlined">alternate_email</span></div>
+            <div class="contact-card__body">
+              <span class="contact-card__label">X (Twitter)</span>
+              <span class="contact-card__value">@yourusername</span>
+            </div>
+            <span class="contact-card__arrow material-symbols-outlined">arrow_forward</span>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-linkedin">
+            <div class="contact-card__icon"><span class="material-symbols-outlined">work</span></div>
+            <div class="contact-card__body">
+              <span class="contact-card__label">LinkedIn</span>
+              <span class="contact-card__value">Nakanishi Sae</span>
+            </div>
+            <span class="contact-card__arrow material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /desktop-canvas -->
+
+  <!-- ===== TASKBAR ===== -->
+  <div class="taskbar" id="taskbar">
+    <div class="taskbar__start">
+      <span class="taskbar__start-logo">NS</span>
+    </div>
+    <div class="taskbar__windows">
+      <button class="taskbar__btn is-active" data-win="win-about" id="tb-about">
+        <span class="material-symbols-outlined">person</span> About
+      </button>
+      <button class="taskbar__btn is-minimized" data-win="win-skills" id="tb-skills">
+        <span class="material-symbols-outlined">terminal</span> Skills
+      </button>
+      <button class="taskbar__btn is-minimized" data-win="win-works" id="tb-works">
+        <span class="material-symbols-outlined">folder_open</span> Works
+      </button>
+      <button class="taskbar__btn is-minimized" data-win="win-contact" id="tb-contact">
+        <span class="material-symbols-outlined">mail</span> Contact
+      </button>
+    </div>
+    <div class="taskbar__tray">
+      <div class="taskbar__clock" id="taskbar-clock">00:00</div>
+      <div class="taskbar__date" id="taskbar-date">2026/05/17</div>
+    </div>
+  </div>
+
+</div><!-- /desktop -->
+
+<script src="main.js"></script>
+</body>
+</html>
